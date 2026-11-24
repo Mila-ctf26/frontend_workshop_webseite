@@ -1,0 +1,245 @@
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend-Workshop kompakt | Frontend Lab</title>
+  </head>
+
+  <body>
+  <!-- Sprunglink zum Hauptinhalt -->
+   <a href="#main-content" class="skip-link">
+    Zum Hauptinhalt springen
+   </a>
+
+    <!-- Header und Navigation -->
+    <header class="site-header">
+      <a href="#home" class="logo">FRONTEND LAB.</a>
+
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero-Bereich -->
+      <section id="home" class="hero">
+        <h1>Frontend-Workshop kompakt</h1>
+
+        <!-- Dekorative Farbbalken -->
+     <div class="color-bars" aria-hidden="true">
+      <span class="blau"></span>
+      <span class="gray"></span>
+      <span class="rose"></span>
+      <span class="black"></span>
+     </div>
+
+        <p>
+          Learn to code. Build the web.
+          Entdecke HTML, CSS und JavaScript.
+        </p>
+        <a href="#workshops" class="btn btn-primary">
+          Workshops entdecken
+        </a>
+      </section>
+
+      <!-- Workshop-Angebote -->
+      <section id="workshops" class="workshops">
+        <h2>Unsere Workshops</h2>
+
+        <!-- Dekorative Farbleiste nach links -->
+        <div class="color-bars color-bars--workshops" aria-hidden="true">
+         <span class="blau"></span>
+         <span class="gray"></span>
+          <span class="rose"></span>
+         <span class="black"></span>
+       </div>
+
+        <p>Drei Workshops. Ein Ziel: selbst entwickeln.</p>
+
+        
+<!-- Wiederverwendbare Workshop-Karten -->
+<div class="workshop-grid">
+
+  <!-- Workshop 01: HTML -->
+  <article class="workshop-card">
+    <span class="workshop-card__number">01 / HTML</span>
+
+    <p class="workshop-card__stat">100%</p>
+    <p class="workshop-card__stat-label">Praxisorientiert</p>
+
+    <div class="workshop-card__content">
+      <span class="workshop-card__badge">Anfänger</span>
+      <h3>HTML Basics</h3>
+      <p>Struktur und Semantik verstehen.</p>
+      <p class="workshop-card__info">Dauer: 2 Stunden</p>
+
+      <a href="#contact" class="btn btn-secondary">
+        HTML-Workshop anfragen
+      </a>
+    </div>
+  </article>
+
+  <!-- Workshop 02: CSS -->
+  <article class="workshop-card">
+    <span class="workshop-card__number">02 / CSS</span>
+
+    <p class="workshop-card__stat">100%</p>
+    <p class="workshop-card__stat-label">Kreativität</p>
+
+    <div class="workshop-card__content">
+      <span class="workshop-card__badge">Anfänger</span>
+      <h3>CSS Design</h3>
+      <p>Moderne und responsive Layouts gestalten.</p>
+      <p class="workshop-card__info">Dauer: 3 Stunden</p>
+
+      <a href="#contact" class="btn btn-secondary">
+        CSS-Workshop anfragen
+      </a>
+    </div>
+  </article>
+
+  <!-- Workshop 03: JavaScript -->
+  <article class="workshop-card">
+    <span class="workshop-card__number">03 / JS</span>
+
+    <p class="workshop-card__stat">100%</p>
+    <p class="workshop-card__stat-label">Interaktivität</p>
+
+    <div class="workshop-card__content">
+      <span class="workshop-card__badge">Aufbau</span>
+      <h3>JavaScript</h3>
+      <p>Interaktive Webseiten entwickeln.</p>
+      <p class="workshop-card__info">Dauer: 4 Stunden</p>
+
+      <a href="#contact" class="btn btn-secondary">
+        JavaScript-Workshop anfragen
+      </a>
+    </div>
+  </article>
+
+</div>
+
+      </section>
+
+     
+<!-- FAQ-Bereich -->
+<section id="faq" class="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-list">
+
+    <!-- FAQ 01 -->
+    <div class="faq-item">
+      <h3>
+        <button
+          type="button"
+          class="faq-question"
+          id="faq-question-1"
+          aria-expanded="false"
+          aria-controls="faq-answer-1"
+        >
+          Brauche ich Vorkenntnisse?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+
+      <div
+        class="faq-answer"
+        id="faq-answer-1"
+        role="region"
+        aria-labelledby="faq-question-1"
+        hidden
+      >
+        <p>Nein, unsere Einsteiger-Workshops sind für alle geeignet.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 02 -->
+    <div class="faq-item">
+      <h3>
+        <button
+          type="button"
+          class="faq-question"
+          id="faq-question-2"
+          aria-expanded="false"
+          aria-controls="faq-answer-2"
+        >
+          Wie lange dauern die Workshops?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+
+      <div
+        class="faq-answer"
+        id="faq-answer-2"
+        role="region"
+        aria-labelledby="faq-question-2"
+        hidden
+      >
+        <p>Die Workshops dauern zwischen 2 und 4 Stunden.</p>
+      </div>
+    </div>
+
+    <!-- FAQ 03 -->
+    <div class="faq-item">
+      <h3>
+        <button
+          type="button"
+          class="faq-question"
+          id="faq-question-3"
+          aria-expanded="false"
+          aria-controls="faq-answer-3"
+        >
+          Kann ich online teilnehmen?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+
+      <div
+        class="faq-answer"
+        id="faq-answer-3"
+        role="region"
+        aria-labelledby="faq-question-3"
+        hidden
+      >
+        <p>Ja, alle Workshops finden online statt.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+      <!-- Kontaktbereich -->
+      <section id="contact" class="contact">
+        <h2>Ready to start?</h2>
+ 
+     <!-- Dekorative Farbleiste -->
+      <div class="color-bars color-bars--contact" aria-hidden="true">
+       <span class="blau"></span>
+       <span class="gray"></span>
+       <span class="rose"></span>
+      <span class="black"></span>
+     </div>
+        <p>Entdecke die Möglichkeiten der Frontend-Entwicklung.</p>
+        <a href="mailto:workshops@example.com" class="btn btn-primary">
+          Workshop anfragen
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© 2026 Frontend Lab. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,740 @@
+/* Globale Grundeinstellungen */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+
+/* Designsystem: Farben, Abstände und Rundungen */
+
+:root {
+  --color-primary: #231f20;
+  --color-secondary: #075bff;
+  --color-accent: #27f5a5;
+  --color-pink: #fface0;
+  --color-background: #f1f2f3;
+  --color-text: #231f20;
+  --color-white: #ffffff;
+
+  --spacing: 1rem;
+  --radius: 0.25rem;
+
+  --container-width: 1440px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* Grundlegende Typografie */
+
+body {
+  min-width: 320px;
+  line-height: 1.5;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+/* Header und Hauptnavigation */
+
+.site-header {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  color: var(--color-secondary);
+}
+
+/* Hero-Bereich */
+
+.hero {
+  max-width: var(--container-width);
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Hero-Überschrift */
+
+.hero h1 {
+  max-width: none;
+  margin-bottom: 0.25rem;
+
+  font-size: clamp(2.5rem, 4.5vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.065em;
+  white-space: nowrap;
+}
+
+/* Hero-Beschreibung */
+
+.hero p {
+  max-width: 1200px;
+  font-size: clamp(1.5rem, 2.3vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+.hero .btn {
+  margin-top: 2rem;
+}
+
+/* Wiederverwendbare Buttons */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.9rem 1.5rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+
+
+/* Farbleiste bis zum rechten Bildschirmrand */
+
+.color-bars {
+  display: flex;
+  width: calc(50vw + 50%);
+  margin: 0 0 0.5rem;
+}
+
+.color-bars span {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  height: 0.5rem;
+}
+
+.blau {
+  background-color: #075bff;
+  
+}
+
+.gray {
+  background-color: #27f5a5;
+
+}
+
+.rose {
+  background-color: #fface0;
+
+}
+
+.black {
+  background-color: #000000;
+}
+
+
+/* Farbleiste bis zum Ende der Überschrift */
+
+.color-bars--workshops {
+  width: calc(50vw - 50% + 38rem);
+  max-width: none;
+  margin: 0 0 1rem;
+  margin-left: calc(50% - 50vw);
+  flex-direction: row-reverse;
+}
+
+
+/* Workshop-Bereich mit vollflächigem Hintergrund */
+
+.workshops {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+
+  background-color: #e3e5e8;
+
+  box-shadow: 0 0 0 100vmax #e3e5e8;
+  clip-path: inset(0 -100vmax);
+}
+
+.workshops h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+
+.workshops > p {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+/* Wiederverwendbares Kartenraster */
+
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Workshop-Karten */
+
+.workshop-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 520px;
+  padding: 1.5rem;
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius);
+}
+
+.workshop-card:nth-child(2) {
+  background-color: var(--color-secondary);
+}
+
+.workshop-card:nth-child(3) {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* Kartennummer und Prozentanzeige */
+
+.workshop-card__number {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.workshop-card__stat {
+  margin: 1.5rem 0 0;
+  font-size: clamp(4rem, 6vw, 7rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.workshop-card__stat-label {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Karteninhalt */
+
+.workshop-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.workshop-card__content h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.workshop-card__content p {
+  margin: 0;
+}
+
+.workshop-card__info {
+  font-size: 0.875rem;
+}
+
+/* Wiederverwendbare Niveau-Badges */
+
+.workshop-card__badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Button-Varianten innerhalb der Karten */
+
+.workshop-card .btn-secondary {
+  margin-top: 1rem;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-white);
+}
+
+.workshop-card .btn-secondary:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.workshop-card:nth-child(3) .btn-secondary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.workshop-card:nth-child(3) .btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-white);
+}
+
+
+/* FAQ-Bereich */
+
+.faq {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.faq h2 {
+  margin-bottom: 3rem;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+/* Wiederverwendbare FAQ-Elemente */
+
+.faq-item {
+  border-top: 1px solid var(--color-primary);
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.faq-item h3 {
+  margin: 0;
+}
+
+/* Interaktive Fragen */
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  width: 100%;
+  padding: 1.75rem 0;
+
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  color: var(--color-secondary);
+}
+
+/* Sichtbarer Tastaturfokus */
+
+.faq-question:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 4px;
+}
+
+/* Plus- und Minus-Symbol */
+
+.faq-icon {
+  flex-shrink: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-secondary);
+}
+
+/* Aufklappbare Antworten */
+
+.faq-answer {
+  max-width: 800px;
+  padding: 0 0 2rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.faq-answer[hidden] {
+  display: none;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+
+
+/* Kontaktbereich */
+
+.contact {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 6rem 2rem;
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  box-shadow: 0 0 0 100vmax var(--color-primary);
+  clip-path: inset(0 -100vmax);
+}
+
+/* Kontakt-Überschrift */
+
+.contact h2 {
+  max-width: 1000px;
+  margin-bottom: 1.5rem;
+
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+/* Kontakt-Beschreibung */
+
+.contact p {
+  max-width: 650px;
+  margin-bottom: 3rem;
+
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.3;
+}
+
+/* Kontakt-Button */
+
+.contact .btn-primary {
+  background-color: var(--color-pink);
+  color: var(--color-primary);
+  border-color: var(--color-pink);
+}
+
+.contact .btn-primary:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+
+
+/* Footer */
+
+.site-footer {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem;
+
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 0 0 100vmax var(--color-primary);
+  clip-path: inset(0 -100vmax);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+
+
+/* Barrierefreiheit: Sprunglink */
+
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius);
+
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+/* Sichtbarer Fokus für interaktive Elemente */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 4px;
+}
+
+
+/* Responsive Footer */
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+
+
+/* Responsive Kontaktbereich */
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 4rem 1.25rem;
+  }
+
+  .contact h2 {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+}
+
+
+/* Responsive FAQ-Darstellung */
+
+@media (max-width: 600px) {
+  .faq {
+    padding: 4rem 1.25rem;
+  }
+
+  .faq h2 {
+    margin-bottom: 2rem;
+  }
+
+  .faq-question {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Responsive Workshop-Karten */
+
+@media (max-width: 900px) {
+  .workshop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .workshops {
+    padding: 3rem 1.25rem;
+  }
+
+  .workshop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-card {
+    min-height: 440px;
+  }
+
+  .workshop-card__stat {
+    font-size: 5rem;
+  }
+}
+
+
+
+
+/* Responsive Navigation und Hero */
+
+@media (max-width: 768px) {
+  .site-header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+  .hero {
+  min-height: auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+  .hero h1 {
+  font-size: clamp(2.5rem, 14vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  white-space: normal;
+  overflow-wrap: normal;
+}
+
+  .hero p {
+  max-width: 32rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hero .btn {
+  margin-top: 1rem;
+}
+
+}
+
+/* Tablet: Hero-Bereich */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero h1 {
+    font-size: clamp(3rem, 7vw, 4.5rem);
+    line-height: 1;
+    white-space: normal;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    line-height: 1.3;
+  }
+}
+
+/* Tablet: Navigation */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .site-header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-list {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .nav-list a {
+    font-size: 0.875rem;
+  }
+}
+
+/* Hero-Höhe für Tablets und kleinere Laptops */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .hero {
+    min-height: 520px;
+  }
+}
+
+
+/* Dekorative Farbleiste im Kontaktbereich */
+
+.color-bars--contact {
+  width: min(100%, 53rem);
+  margin: 0 0 1.5rem;
+}
+
+.color-bars--contact span {
+  height: 0.5rem;
+}
