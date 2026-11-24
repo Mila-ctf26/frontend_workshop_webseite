@@ -220,7 +220,7 @@ button {
 /* Farbleiste bis zum Ende der Überschrift */
 
 .color-bars--workshops {
-  width: calc(50vw - 50% + 38rem);
+  width: min(100vw, calc(50vw- 50% + 38rem));
   max-width: none;
   margin: 0 0 1rem;
   margin-left: calc(50% - 50vw);
